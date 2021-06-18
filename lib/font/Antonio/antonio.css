@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Antonio";
+    src: url('Antonio-VariableFont_wght.ttf') format('truetype');
+
+    font-weight: 700;
+    font-style: bold;
+}
