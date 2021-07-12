@@ -63,22 +63,696 @@
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Section</h2>
+            <h2>Why operators</h2>
+          </section>
+        </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Operator SDK</h2>
+          </section>
+        </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Creating a project</h2>
+          </section>
+          <section>
+             <h3>Initialization</h3>
+             <code class="fragment">operator-sdk init --domain example.test --plugins x,y,z</code>
+          </section>
+          <section>
+            <h3>Domain</h3>
+            <p class="fragment">Not <span class="fragment">(necessarily)</span> a web domain</p>
+            <p class="fragment">Namespace for API definitions (kinds)</p>
+          </section>
+          <section>
+            <h3>Choosing a domain</h3>
+            <p class="fragment">Shorter is better</p>
+            <code class="fragment">kind.group.domain.tld</code>
+          </section>
+          <section>
+            <h3>So how do I choose?</h3>
+            <p class="fragment">domain is your <ins>org</ins></p>
+            <p class="fragment">group is your <ins>app</ins></p>
+          </section>
+          <section>
+            <h3>Plugins</h3>
+            <p class="fragment">The runtime env for you operator</p>
+            <p class="fragment">Go, Helm, Ansible</p>
+          </section>
+          <section>
+            <h3>Go</h3>
+            <p class="fragment">Most flexible, but <span class="fragment">most difficult</span></p>
+            <p class="fragment">Best for new, from-scratch operators</p>
+          </section>
+          <section>
+            <h3>Helm</h3>
+            <p class="fragment">Easiest, but <span class="fragment">least flexible</span></p>
+            <p class="fragment">Add CRD support to existing chart</p>
+          </section>
+          <section>
+            <h3>Ansible</h3>
+            <p class="fragment">More flexible than Helm,</p>
+            <p class="fragment">less complex than Go</p>
+          </section>
+          <section>
+            <h3>The middle ground</h3>
+            <p class="fragment">Interpreted, not compiled</p>
+            <p class="fragment">Built-in modules for k8s, DBs, Cloud, and more</p>
+          </section>
+          <section>
+            <h3>When to use</h3>
+            <p class="fragment">Port existing CI scripts to CRDs</p>
+            <p class="fragment">Simpler apps which need stateful changes</p>
+          </section>
+          <section>
+            <h3>init in subdirectory</h3>
+            <code class="fragment">path/to/my-operator/src</code>
+            <p class="fragment">Aids in build automation</p>
+          </section>
+          <section data-transition="none">
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator/src
+  ├── config/
+  ├── Dockerfile
+  ├── Makefile
+  ├── molecule/
+  ├── playbooks/
+  ├── PROJECT
+  ├── requirements.yml
+  ├── roles/
+  └── watches.yaml</code></pre>
+          </section>
+          <section data-transition="none">
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator/src
+  ├── config/                    <-- CRDs
+  ├── Dockerfile
+  ├── Makefile
+  ├── molecule/
+  ├── playbooks/
+  ├── PROJECT
+  ├── requirements.yml
+  ├── roles/
+  └── watches.yaml</code></pre>
+          </section>
+          <section data-transition="none">
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator/src
+  ├── config/
+  ├── Dockerfile                 <-- Operator Dockerfile
+  ├── Makefile
+  ├── molecule/
+  ├── playbooks/
+  ├── PROJECT
+  ├── requirements.yml
+  ├── roles/
+  └── watches.yaml</code></pre>
+          </section>
+          <section data-transition="none">
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator/src
+  ├── config/
+  ├── Dockerfile                 Ansible files
+  ├── Makefile                   -------------
+  ├── molecule/                  <-- tests
+  ├── playbooks/                 <-- source
+  ├── PROJECT
+  ├── requirements.yml           <-- dependencies
+  ├── roles/                     <-- more source
+  └── watches.yaml</code></pre>
+          </section>
+          <section data-transition="none">
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator/src
+  ├── config/
+  ├── Dockerfile
+  ├── Makefile
+  ├── molecule/
+  ├── playbooks/
+  ├── PROJECT
+  ├── requirements.yml
+  ├── roles/
+  └── watches.yaml               <-- SDK configuration</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Creating an API</h2>
+          </section>
+          <section>
+            <h3>Creating a kind</h3>
+            <code class="fragment">operator-sdk create api --group myApp --kind myKind --generate-role</code>
+          </section>
+          <section>
+            <h3>What does it do?</h3>
+            <ol>
+              <li class="fragment">Creates a CRD template</li>
+              <li class="fragment">Updates <code>watches.yaml</code></li>
+              <li class="fragment">Creates Ansible Role * </li>
+            </ol>
+            <p class="fragment"><small>* <code>--generate-role only</code></small></p>
+          </section>
+          <section>
+            <h3>CRD Schema</h3>
+            <p class="fragment">One for each API</p>
+            <p class="fragment"><code>config/crd/bases/</code></p>
+          </section>
+          <section>
+            <h3>Structure, Fields, Types</h3>
+            <p class="fragment">Based on <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md#schemaObject">OpenAPI v3 schema</a></p>
+            <p class="fragment">"Accept all" schema by default</p>
+          </section>
+          <section>
+            <pre><code>apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: mysqlclusters.myapp.example.tld
+spec:
+  group: myapp.example.tld
+  names:
+    kind: MySQLCluster
+    listKind: MySQLClusterList
+    plural: mysqlclusters
+    singular: mysqlcluster
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: MySQLCluster is the Schema for the mysqlclusters API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Spec defines the desired state of MySQLCluster
+            type: object
+            x-kubernetes-preserve-unknown-fields: true
+          status:
+            description: Status defines the observed state of MySQLCluster
+            type: object
+            x-kubernetes-preserve-unknown-fields: true
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}</code></pre>
+            <small class="fragment">(Scroll down)</small>
+          </section>
+        </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Writing the role</h2>
             <p>Section text</p>
           </section>
           <section>
-            <h2>Code sample</h2>
-            <pre><code>void main() {
-  return 0;
-}</code></pre>
+            <h3>Cluster access</h3>
+            <p class="fragment">Operator relies on service account, role</p>
+          </section>
+          <section>
+            <pre><code>path/to/my-operator/src
+└── config
+    └── crd
+        ├── role_binding.yaml
+        ├── role.yaml
+        └── service_account.yaml</code></pre>
+          </section>
+          <section>
+            <h3>Input</h3>
+            <p class="fragment">CRD defintion created, deleted, edited</p>
+            <p class="fragment">Passed as Ansible vars</p>
+          </section>
+          <section>
+            <h3>Metadata values</h3>
+            <pre class="fragment"><code>{{ ansible_operator_meta.name }}
+{{ ansible_operator_meta.namespace }}</code></pre>
+            <p class="fragment"><small>Differs in older SDK versions</small></p>
+          </section>
+          <section>
+            <h3>Spec values</h3>
+            <p class="fragment">Contents exported as Ansible vars</p>
+            <p class="fragment"><code>CamelCase</code> &rarr; <code>snake_case</code></p>
+          </section>
+          <section>
+            <h3>Creating, updating defs</h3>
+            <p class="fragment"><code>k8s</code> module</p>
+            <p class="fragment"><code>~/.kube/config.json</code> auto-populated</p>
+          </section>
+          <section>
+            <pre><code>---
+- name: Create mysql writer service
+  k8s:
+    definition: |
+      ---
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: {{ ansible_operator_meta.name }}
+        labels:
+          app.kubernetes.io/managed-by: "flightdeck-operator"
+          app.kubernetes.io/created-by: "controller-manager"
+      spec:
+        clusterIP: None
+        ports:
+          - name: mysql
+            port: 3306
+            protocol: TCP
+        selector:
+          app.kubernetes.io/name: "mysql"
+          mysql-cluster: "{{ ansible_operator_meta.name }}"
+    namespace: "{{ ansible_operator_meta.namespace }}"</code></pre>
+            <p class="fragment"><small>(Scroll down)</small></p>
+          </section>
+          <section>
+            <h3>Deployment</h3>
+            <ol>
+              <li class="fragment">Build the docker image</li>
+              <li class="fragment">Push the image to registry</li>
+              <li class="fragment">Push defitions to cluster</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Configure image and tag</h3>
+            <p class="fragment">Set in <code>Makefile</code></p>
+            <p class="fragment"><code>IMG ?= controller:latest</code></p>
+          </section>
+          <section>
+            <h3>Build the docker image</h3>
+            <p class="fragment"><code>make docker-build</code></p>
+            <p class="fragment">Builds and tags the image</p>
+          </section>
+          <section>
+            <h3>Push to registry</h3>
+            <p class="fragment"><code>docker login</code></p>
+            <p class="fragment"><code>make docker-push</code></p>
+          </section>
+          <section>
+            <h3>Apply defs</h3>
+            <p class="fragment"><code>make deploy</code></p>
+            <p class="fragment">Set credientials in <code>~/.kube/config</code></p>
+          </section>
+          <section>
+            <h3>Deploy a CRD</h3>
+            <p class="fragment">YAML in <code>config/samples/</code></p>
+            <p class="fragment">Edit, then <code>kubectl apply</code></p>
+          </section>
+          <section>
+            <h3>Watch the fun</h3>
+            <p class="fragment"><code>kubectl logs my-operator-pod</code></p>
+            <p class="fragment">Not necessary, but instructive!</p>
+          </section>
+          <section>
+            <h3>Viewing results</h3>
+            <p class="fragment"><code>kubectl edit</code> the CRD</p>
+            <p class="fragment"><code>state</code> section (VALIDATE THIS)</p>
+          </section>
+          <section>
+            <h3>Roles run twice</h3>
+            <ol>
+              <li class="fragment">Deployment run creates k8s resources</li>
+              <li class="fragment">Reconcile run validates resource state</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Importance of 'CHANGED'</h3>
+            <p class="fragment">Updating a def, writing a file, etc.</p>
+            <p class="fragment">Causes reconcile run to loop</p>
+          </section>
+          <section>
+            <h3>Clean up</h3>
+            <p class="fragment"><code>make undeploy</code></p>
+            <p class="fragment">Mind you finalizers!</p>
           </section>
         </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Stateful changes</h2>
+          </section>
+          <section>
+            <h3>Any non-k8s resource</h3>
+            <p class="fragment">On-cluster applications</p>
+            <p class="fragment">External APIs</p>
+          </section>
+          <section>
+            <h3>No reconcile run</h3>
+            <p class="fragment">No k8s defs created, so not needed</p>
+          </section>
+          <section>
+            <h3>Modifying the image</h3>
+            <p class="fragment">Update <code>Dockerfile</code></p>
+            <p class="fragment">Based on <a href="https://hub.docker.com/r/redhat/ubi8">RedHat UBI</a></p>
+          </section>
+          <section>
+            <h3>Adding libraries</h3>
+            <p class="fragment"><code>pip</code> for Python-only libs</p>
+            <p class="fragment"><code>yum</code> for everything else</p>
+            <p class="fragment"><small>Thanks Jeff Geerling!</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml   #
+RUN ansible-galaxy collection install \          #
+ -r ${HOME}/requirements.yml \                   #
+ && chmod -R ug+rwx ${HOME}/.ansible             #
+                                                 #  Lines from SDK
+COPY watches.yaml ${HOME}/watches.yaml           #
+COPY roles/ ${HOME}/roles/                       #
+COPY playbooks/ ${HOME}/playbooks/               #
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root     # change to root to run installs
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+# Download MySQL
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+# Install MySQL client and Python libs
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+# Switch back to ansible user.
+USER ansible</code></pre>
+            <p class="fragment"><small>(Scroll down)</small></p>
+          </section>
+          <section>
+            <h3>SOMETHING ABOUT CHAIN LOOKUPS HERE</h3>
+          </section>
+          <section>
+            <h3>Looking up defs</h3>
+            <p class="fragment"><code>k8s</code> lookup</p>
+            <p class="fragment">Relies on <code>~/.kube/config.json</code></p>
+          </section>
+          <section>
+            <pre><code>- name: Get CRD
+  set_fact:
+    _crd: "{{ lookup('k8s', kind='my-kind', namespace='my-namespace', resource_name=_var_with_name)}}"</code></pre>
+            <p class="fragment"><small>(Scroll right)</small></p>
+          </section>
+          <section>
+            <h3>Where to use</h3>
+            <p class="fragment">Inline</p>
+            <p class="fragment">Task-level <code>vars</code></p>
+            <p class="fragment"><code>set_fact</code> task</p>
+          </section>
+          <section>
+            <h3>Failed lookups</h3>
+            <p class="fragment">Returns empty list, <span class="fragment">does <ins>not</ins> fail the run!</span></p>
+            <p class="fragment"><code>(_def_lookup | default([])) | length < 1</code></p>
+          </section>
+          <section>
+            <h3>Fail module</h3>
+            <p class="fragment">Causes run to fail</p>
+            <p class="fragment">Set message to aid debugging</p>
+          </section>
+          <section>
+            <pre><code>- name: Fetch the MySQLCluster definition
+  set_fact:
+    _cluster_def: "{{ lookup('k8s', kind='MySQLCluster', namespace=_cluster_def_namespace, resource_name=cluster.name) }}"
+  vars:
+    _cluster_def_namespace: "{{ cluster.namespace | default(ansible_operator_meta.namespace) }}"
+- fail:
+    msg: "Could not find requested MySQLCluster {{ cluster.name }}"
+  when:
+    - "(_cluster_def | default([])) | length < 1"</code></pre>
+          </section>
+          <section>
+            <h3>Stateful deletions</h3>
+            <p class="fragment">Must be handled by you operator</p>
+            <p class="fragment">No auto-cleanup like k8s defs</p>
+          </section>
+          <section>
+            <h3>Finalizers</h3>
+            <p class="fragment">Run when deleting a k8s def</p>
+            <p class="fragment">Specified in <code>watches.yaml</code></p>
+          </section>
+          <section>
+            <h3>Ansible Finalizers</h3>
+            <p class="fragment">Existing role, playbook with custom vars</p>
+            <p class="fragment">New role or playbook</p>
+          </section>
+          <section>
+            <h3>Role recommended*</h3>
+            <p class="fragment">Seperate from creation role</p>
+            <p class="fragment">My result in some duplication, but easier!</p>
+            <!-- Comic sidebar here about how that's my optinion -->
+          </section>
+          <section>
+            <h3>Creating the role</h3>
+            <p class="fragment">ansible-galaxy init path/to/my-operator/src/roles</p>
+            <p class="fragment"><code>nameOfCreationRole_finalizer</code></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>---
+- version: v1
+  group: myapp.myorg.tld  #
+  kind: MySQLCluster      #  From  `operator-sdk create api`
+  role: mysqlcluster      #
+  finalizer:
+    name: myapp.myorg.tld/cluster-finalizer
+    role: mysqlcluster_finalizer</code></pre>
+          </section>
+          <section data-transition="none">
+            <pre><code>---
+- version: v1
+  group: myapp.myorg.tld
+  kind: MySQLCluster
+  role: mysqlcluster
+  finalizer:                                  #
+    name: myapp.myorg.tld/cluster-finalizer   # Created manually
+    role: mysqlcluster_finalizer              #</code></pre>
+          </section>
+          <section>
+            <h3>Finalizers and undeploy</h3>
+            <p class="fragment"><code>make undeploy</code> kills operator <em>first</em></p>
+            <p class="fragment">Delete defs manually, or <code>finalizers: []</code></p>
+          </section>
+        </section>
+
+        <section>
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+            <h2>Activate the Emergency Engineering Hologram!</h2>
+            <p>Automating deployment</p>
+          </section>
+          <section>
+            <h2>Directory layout</h2>
+            <p class="fragment"><code>src/</code> helps here!</p>
+          </section>
+          <section>
+            <h3>Dockerfile</h3>
+            <p class="fragment">Nothing fancy here</p>
+            <p class="fragment">Public base image, no complex build</p>
+          </section>
+          <section>
+            <h3>Build like any container</h3>
+            <p class="fragment">docker build, tag, and push</p>
+            <p class="fragment">Docker Hub automated build</p>
+          </section>
+          <section>
+            <img src="images/Screenshot from 2021-07-11 20-45-24.png" />
+          </section>
+          <section>
+            <h3>Replacing make deploy</h3>
+            <p class="fragment">Conventional manifest</p>
+            <p class="fragment">Helm chart</p>
+          </section>
+          <section>
+            <h3>Getting the manifest</h3>
+            <p class="fragment">Capture <code>kustomize</code> output</p>
+            <p class="fragment">Hack the makefile!</p>
+          </section>
+          <section>
+            <pre><code>deploy: kustomize
+  cd config/manager && $(KUSTOMIZE) edit set image controller=${IMG}
+  $(KUSTOMIZE) build config/default | kubectl apply -f -</code></pre>
+            <p class="fragment">to</p>
+            <pre class="fragment"><code>deploy: kustomize
+  cd config/manager && $(KUSTOMIZE) edit set image controller=${IMG}
+  $(KUSTOMIZE) build config/default > path/to/output.yml -</code></pre>
+          </section>
+          <section>
+            <h3>Helm chart</h3>
+            <p class="fragment">Often used to dpeloy operators</p>
+            <p class="fragment">Templating, versioning, 3rd party integrations</p>
+          </section>
+          <section>
+            <h3>Creating the chart</h3>
+            <p class="fragment">Use <code>kustomize</code> output</p>
+            <p class="fragment">Break up into files, add helm labels</p>
+          </section>
+          <section>
+            <h3>Directory layout</h3>
+            <pre><code>path/to/my-operator
+└── charts
+    └── my-chart
+        ├── Chart.yaml
+        ├── templates
+        │   ├── crds.yaml
+        │   ├── deployment.yaml
+        │   ├── _helpers.tpl
+        │   └── rbac.yaml
+        └── values.yaml
+</code></pre>
+            <p class="fragment"><small>(You'll see why in a sec!)</small></p>
+          </section>
+          <section>
+            <h3>Distribution</h3>
+            <p class="fragment">Need a Helm repository</p>
+            <p class="fragment">Hosts chart tarballs by version</p>
+          </section>
+          <section>
+            <h3>Github as a helm repo</h3>
+            <p class="fragment">Pages hosts the repo</p>
+            <p class="fragment">Actions builds the chart</p>
+          </section>
+          <section>
+            <h3>Configuring pages</h3>
+            <p class="fragment"><code>gh-pages</code> branch</p>
+            <p class="fragment">Branch must be empty</p>
+          </section>
+          <section>
+            <h3>Set up Action</h3>
+            <p class="fragment">Uses <code>stefanprodan/helm-gh-pages</code></p>
+            <p class="fragment">Commit to <code>.github/workflows/release-chart.yml</code></p>
+          </section>
+          <section>
+            <h3>Override the version</h3>
+            <p class="fragment">Sets app, chart version to gh-pages tag</p>
+            <p class="fragment">Ignores version in <code>Chart.yaml</code></p>
+          </section>
+          <section>
+            <pre><code>name: release-chart
+on:
+  push:
+    tags: '*'
+
+jobs:
+  release-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Publish Helm chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          charts_dir: charts
+          branch: gh-pages
+          app_version: ${{ env.RELEASE_VERSION }}
+          chart_version: ${{ env.RELEASE_VERSION }}</code></pre>
+            <p class="fragment"><small>(Scroll down.)</small></p>
+          </section>
+          <section>
+            <h3>Deployment</h3>
+            <p class="fragment">Commit to main, tag, push</p>
+            <p class="fragment">Hub builds image</p>
+            <p class="fragment">Action builds Chart</p>
+          </section>
+        </section>
+
         <section>
           <section data-background-transition="none" data-background="images/lcarsTitle.png" data-background-size="contain">
             <h2>Further reading</h2>
-            <p class="fragment"><a href="http://kubernetesbyexample.com/">kubernetesbyexample.com</a></p>
-            <p class="fragment"><a href="https://kubernetes.io/docs/tutorials/kubernetes-basics/">Interactive tutorial on kubernetes.io</a></p>
-            <p class="fragment"><a href="https://www.youtube.com/playlist?list=PL36d5sLUxT4QhU0xxIWg1ERlm5N8BkAMV">TEN7's Hosting Drupal on Kubernetes</a></p>
+            <p class="fragment"><a href="https://helm.sh/docs/chart_template_guide/getting_started/">Helm chart getting started</a></p>
+            <p class="fragment"><a href="https://medium.com/@stefanprodan/automate-helm-chart-repository-publishing-with-github-actions-and-pages-8a374ce24cf4">Github as a Helm repo</a></p>
           </section>
         </section>
 
