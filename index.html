@@ -63,19 +63,72 @@
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Why operators</h2>
+            <h2>"I need warp speed now!"</h2>
+          </section>
+          <section>
+            <h3>What is an operator?</h3>
+            <p class="fragment">Not a product...<span class="fragment">an API...</span><span class="fragment">or a library.</span></p>
+          </section>
+          <section data-transition="none">
+            <img src="images/operator1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator3a.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator5.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator6.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator7.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/operator8.png" />
+          </section>
+          <section>
+            <h3>An operator is a pattern</h3>
+            <p class="fragment">A resident, <span class="fragment">privileged container...</span></p>
+            <p class="fragment">...which watches for CRDs, <span class="fragment">and performs actions</span></p>
+          </section>
+          <section data-background="images/operatorsdk.png" data-background-size="contain">
+            <h3>Operator SDK</h3>
+            <p class="fragment">A framework to create operators</p>
+            <p class="fragment">Open source, sponsored by Red Hat</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/linuxInstall1.png" data-background-size="contain">
+            <h3>Getting the SDK</h3>
+            <p class="fragment">Homebrew (macOS), <span class="fragment">Github release</span></p>
+            <p>&nbsp;</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/linuxInstall2.png" data-background-size="contain">
+            <h3>Getting the SDK</h3>
+            <p>Homebrew (macOS), <span>Github release</span></p>
+            <p class="fragment"><a href="https://sdk.operatorframework.io/docs/installation/">sdk.operatorframework.io/docs/installation</a></p>
+          </section>
+          <section>
+            <h3>Other dependencies</h3>
+            <p class="fragment"><a href="https://v1-18.docs.kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a>, <a href="https://docs.docker.com/install/">Docker Desktop</a></p>
+            <p class="fragment"><a href="https://golang.org/doc/install">Go-lang</a></p>
+            <p class="fragment"><a href="https://helm.sh/docs/intro/install/">Helm</a></p>
+            <p class="fragment"><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a>, <a href="https://ansible-runner.readthedocs.io/en/latest/install.html">Ansible runner</a>, <a href="https://pypi.org/project/openshift/">Openshift Python</a></p>
           </section>
         </section>
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Operator SDK</h2>
-          </section>
-        </section>
-
-        <section>
-          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Creating a project</h2>
+            <h2>Power up the replicator</h2>
+            <p>Creating a project</p>
           </section>
           <section>
              <h3>Initialization</h3>
@@ -91,35 +144,45 @@
             <p class="fragment">Shorter is better</p>
             <code class="fragment">kind.group.domain.tld</code>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/yourMilage1.png" data-background-size="contain">
             <h3>So how do I choose?</h3>
             <p class="fragment">domain is your <ins>org</ins></p>
             <p class="fragment">group is your <ins>app</ins></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/yourMilage2.png" data-background-size="contain">
+            <h3>So how do I choose?</h3>
+            <p class="">domain is your <ins>org</ins></p>
+            <p class="">group is your <ins>app</ins></p>
           </section>
           <section>
             <h3>Plugins</h3>
             <p class="fragment">The runtime env for you operator</p>
             <p class="fragment">Go, Helm, Ansible</p>
           </section>
-          <section>
-            <h3>Go</h3>
+          <section data-background="images/golang.png" data-background-size="contain">
+            <h3>Go lang</h3>
             <p class="fragment">Most flexible, but <span class="fragment">most difficult</span></p>
             <p class="fragment">Best for new, from-scratch operators</p>
           </section>
-          <section>
+          <section data-background="images/helm.png" data-background-size="contain">
             <h3>Helm</h3>
             <p class="fragment">Easiest, but <span class="fragment">least flexible</span></p>
             <p class="fragment">Add CRD support to existing chart</p>
           </section>
-          <section>
+          <section data-background="images/ansible.png" data-background-size="contain">
             <h3>Ansible</h3>
             <p class="fragment">More flexible than Helm,</p>
             <p class="fragment">less complex than Go</p>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/alreadyUsing1.png" data-background-size="contain">
             <h3>The middle ground</h3>
             <p class="fragment">Interpreted, not compiled</p>
             <p class="fragment">Built-in modules for k8s, DBs, Cloud, and more</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/alreadyUsing2.png" data-background-size="contain">
+            <h3>The middle ground</h3>
+            <p class="">Interpreted, not compiled</p>
+            <p class="">Built-in modules for k8s, DBs, Cloud, and more</p>
           </section>
           <section>
             <h3>When to use</h3>
@@ -220,10 +283,20 @@
             <p class="fragment">One for each API</p>
             <p class="fragment"><code>config/crd/bases/</code></p>
           </section>
-          <section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/goodForDev1.png" data-background-size="contain">
             <h3>Structure, Fields, Types</h3>
             <p class="fragment">Based on <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md#schemaObject">OpenAPI v3 schema</a></p>
             <p class="fragment">"Accept all" schema by default</p>
+          </section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/goodForDev2.png" data-background-size="contain">
+            <h3>Structure, Fields, Types</h3>
+            <p class="">Based on <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md#schemaObject">OpenAPI v3 schema</a></p>
+            <p class="">"Accept all" schema by default</p>
+          </section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/goodForDev3.png" data-background-size="contain">
+            <h3>Structure, Fields, Types</h3>
+            <p class="">Based on <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md#schemaObject">OpenAPI v3 schema</a></p>
+            <p class="">"Accept all" schema by default</p>
           </section>
           <section>
             <pre><code>apiVersion: apiextensions.k8s.io/v1
@@ -275,8 +348,8 @@ spec:
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Writing the role</h2>
-            <p>Section text</p>
+            <h2>Gold, Blue or Red?</h2>
+            <p>Writing the role</p>
           </section>
           <section>
             <h3>Cluster access</h3>
@@ -289,6 +362,21 @@ spec:
         ├── role_binding.yaml
         ├── role.yaml
         └── service_account.yaml</code></pre>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/permissions1.png" data-background-size="contain">
+            <h3>Default permissions</h3>
+            <p class="fragment">Work with your CRDs,</p>
+            <p class="fragment">and common k8s defs...<span class="fragment">but not configmaps.</span></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/permissions2.png" data-background-size="contain">
+            <h3>Default permissions</h3>
+            <p class="">Work with your CRDs,</p>
+            <p class="">and common k8s defs...<span class="">but not configmaps.</span></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/permissions3.png" data-background-size="contain">
+            <h3>Default permissions</h3>
+            <p class="">Work with your CRDs,</p>
+            <p class="">and common k8s defs...<span class="">but not configmaps.</span></p>
           </section>
           <section>
             <h3>Input</h3>
@@ -303,7 +391,7 @@ spec:
           </section>
           <section>
             <h3>Spec values</h3>
-            <p class="fragment">Contents exported as Ansible vars</p>
+            <p class="fragment">Contents exported as <span class="fragment"><ins>top-level</ins></span> Ansible vars</p>
             <p class="fragment"><code>CamelCase</code> &rarr; <code>snake_case</code></p>
           </section>
           <section>
@@ -322,13 +410,13 @@ spec:
       metadata:
         name: {{ ansible_operator_meta.name }}
         labels:
-          app.kubernetes.io/managed-by: "flightdeck-operator"
-          app.kubernetes.io/created-by: "controller-manager"
+          app.kubernetes.io/managed-by: "my-operator"
+          app.kubernetes.io/created-by: "my-manager"
       spec:
         clusterIP: None
         ports:
           - name: mysql
-            port: 3306
+            port: {{ mysql_port | default('3306') }}
             protocol: TCP
         selector:
           app.kubernetes.io/name: "mysql"
@@ -344,10 +432,15 @@ spec:
               <li class="fragment">Push defitions to cluster</li>
             </ol>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/registryUrl1.png" data-background-size="contain">
             <h3>Configure image and tag</h3>
             <p class="fragment">Set in <code>Makefile</code></p>
-            <p class="fragment"><code>IMG ?= controller:latest</code></p>
+            <pre class="fragment"><code>IMG ?= https://registry.example.tld/my-operator:x.y.z</code></pre>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/registryUrl2.png" data-background-size="contain">
+            <h3>Configure image and tag</h3>
+            <p class="">Set in <code>Makefile</code></p>
+            <pre class=""><code>IMG ?= https://registry.example.tld/my-operator:x.y.z</code></pre>
           </section>
           <section>
             <h3>Build the docker image</h3>
@@ -359,10 +452,15 @@ spec:
             <p class="fragment"><code>docker login</code></p>
             <p class="fragment"><code>make docker-push</code></p>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/hackTheMakefile1.png" data-background-size="contain">
             <h3>Apply defs</h3>
             <p class="fragment"><code>make deploy</code></p>
             <p class="fragment">Set credientials in <code>~/.kube/config</code></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/hackTheMakefile2.png" data-background-size="contain">
+            <h3>Apply defs</h3>
+            <p class=""><code>make deploy</code></p>
+            <p class="">Set credientials in <code>~/.kube/config</code></p>
           </section>
           <section>
             <h3>Deploy a CRD</h3>
@@ -400,7 +498,8 @@ spec:
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Stateful changes</h2>
+            <h2>Computer, Arch</h2>
+            <p>Stateful changes</p>
           </section>
           <section>
             <h3>Any non-k8s resource</h3>
@@ -572,6 +671,7 @@ USER ansible</code></pre>
     msg: "Could not find requested MySQLCluster {{ cluster.name }}"
   when:
     - "(_cluster_def | default([])) | length < 1"</code></pre>
+            <p class="fragment"><small>(Scroll right)</small></p>
           </section>
           <section>
             <h3>Stateful deletions</h3>
@@ -589,7 +689,7 @@ USER ansible</code></pre>
             <p class="fragment">New role or playbook</p>
           </section>
           <section>
-            <h3>Role recommended*</h3>
+            <h3>Role recommended</h3>
             <p class="fragment">Seperate from creation role</p>
             <p class="fragment">My result in some duplication, but easier!</p>
             <!-- Comic sidebar here about how that's my optinion -->
@@ -751,8 +851,10 @@ jobs:
         <section>
           <section data-background-transition="none" data-background="images/lcarsTitle.png" data-background-size="contain">
             <h2>Further reading</h2>
-            <p class="fragment"><a href="https://helm.sh/docs/chart_template_guide/getting_started/">Helm chart getting started</a></p>
-            <p class="fragment"><a href="https://medium.com/@stefanprodan/automate-helm-chart-repository-publishing-with-github-actions-and-pages-8a374ce24cf4">Github as a Helm repo</a></p>
+            <p><a href="https://www.openshift.com/blog/introducing-the-operator-framework?extIdCarryOver=true&sc_cid=701f2000001Css5AAC">Introduction to Operators</a></p>
+            <p><a href="https://sdk.operatorframework.io/docs/building-operators/ansible/">Operator SDK Ansible Quickstart</a></p>
+            <p><a href="https://helm.sh/docs/chart_template_guide/getting_started/">Helm chart getting started</a></p>
+            <p><a href="https://medium.com/@stefanprodan/automate-helm-chart-repository-publishing-with-github-actions-and-pages-8a374ce24cf4">Github as a Helm repo</a></p>
           </section>
         </section>
 
