@@ -60,10 +60,91 @@
             <p><a href="https://twitter.com/TEN7">@TEN7</a><br /><a href="mailto:hi@ten7.com">hi@ten7.com</a></p>
           </section>
         </section>
-
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
             <h2>"I need warp speed now!"</h2>
+            <p>Just another day in Engineering</p>
+          </section>
+          <section data-transition="none">
+            <img src="images/engineering1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/engineering2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/engineering3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/engineering4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/engineering5.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster01.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster02.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster03.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster04.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster05.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster06.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster07.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster08.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster09.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster10.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster11.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/disaster12.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower1.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower2.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower3.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower4.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower5.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower6.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower7.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower8.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower9.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ineedmorepower10.png" />
           </section>
           <section>
             <h3>What is an operator?</h3>
@@ -263,7 +344,8 @@
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Creating an API</h2>
+            <h2>Gold, Blue or Red?</h2>
+            <p>Creating an API</p>
           </section>
           <section>
             <h3>Creating a kind</h3>
@@ -348,7 +430,7 @@ spec:
 
         <section>
           <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
-            <h2>Gold, Blue or Red?</h2>
+            <h2>Self-sealing stem bolts</h2>
             <p>Writing the role</p>
           </section>
           <section>
@@ -696,8 +778,13 @@ USER ansible</code></pre>
           </section>
           <section>
             <h3>Creating the role</h3>
-            <p class="fragment">ansible-galaxy init path/to/my-operator/src/roles</p>
-            <p class="fragment"><code>nameOfCreationRole_finalizer</code></p>
+            <p class="fragment">Init manually, name after creation role</p>
+            <pre class="fragment"><code>ansible-galaxy init path/to/my-operator/src/roles myRole_finalizer</code></pre>
+          </section>
+          <section>
+            <h3>Update watches.yaml</h3>
+            <p class="fragment">Add <code>finalizer</code> key,</p>
+            <p class="fragment">point to new role.</p>
           </section>
           <section data-transition="none">
             <pre><code>---
