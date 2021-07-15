@@ -113,9 +113,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.0675655"
      inkscape:cx="605.58345"
-     inkscape:cy="666.46964"
+     inkscape:cy="666.46965"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1600"
@@ -176,13 +176,16 @@
            y="395.32367" /></flowRegion><flowPara
          id="flowPara1964" /></flowRoot>
     <g
-       style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1"
        id="g4863"
-       transform="matrix(1.4391595e-4,0,0,1.4391595e-4,868.13506,937.07212)">
+       transform="matrix(1.4391595e-4,0,0,1.4391595e-4,868.13506,937.07212)"
+       inkscape:export-filename="../images/hackTheMakefile2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
       <path
          inkscape:connector-curvature="0"
          d="M 5908.735,388006.2 C -23425.09,231462.3 58367.77,75049.68 208808.8,-0.3411255 359249.6,179461 608053.4,15552.29 668163.4,57630.01 791902.7,167078.4 826311.5,338069.7 753519.8,481801 517958.8,518273.3 314231.3,567447.4 5908.735,388006.2 Z"
-         style="fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          id="path4865" />
     </g>
     <g

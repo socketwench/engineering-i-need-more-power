@@ -112,7 +112,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.75488281"
-     inkscape:cx="456.36223"
+     inkscape:cx="559.68952"
      inkscape:cy="339.78784"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
@@ -176,13 +176,13 @@
            y="395.32367" /></flowRegion><flowPara
          id="flowPara1964" /></flowRoot>
     <g
-       style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1"
        id="g4863"
        transform="matrix(1.4391595e-4,0,0,1.4391595e-4,868.13506,937.07212)">
       <path
          inkscape:connector-curvature="0"
          d="M 5908.735,388006.2 C -23425.09,231462.3 58367.77,75049.68 208808.8,-0.3411255 359249.6,179461 608053.4,15552.29 668163.4,57630.01 791902.7,167078.4 826311.5,338069.7 753519.8,481801 517958.8,518273.3 314231.3,567447.4 5908.735,388006.2 Z"
-         style="fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          id="path4865" />
     </g>
     <g
@@ -723,7 +723,7 @@
        xml:space="preserve"
        id="flowRoot7724-8-9-4-2-6"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(575.07738,171.60619)"
+       transform="translate(579.07738,181.60619)"
        inkscape:export-filename="/Users/tess/projects/rideTheWhale/images/dockerfile.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><flowRegion
@@ -736,7 +736,7 @@
            y="449.22137"
            style="fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
          id="flowPara7730-5-4-5-5-7"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1">Always use the Registry full URL!</flowPara></flowRoot>
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1">Always use the full registry URL!</flowPara></flowRoot>
     <path
        id="path64120"
        style="fill:none;stroke:#e8e8e8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"

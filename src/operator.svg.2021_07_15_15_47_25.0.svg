@@ -9,7 +9,7 @@
    version="1.1"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
    sodipodi:docname="operator.svg"
-   inkscape:export-filename="../images/operator8.png"
+   inkscape:export-filename="../images/operator3a.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -298,10 +298,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.55250001"
-     inkscape:cx="609.04976"
+     inkscape:cx="612.66967"
      inkscape:cy="457.01357"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer22"
      showgrid="false"
      units="px"
      inkscape:window-width="1600"
@@ -362,13 +362,13 @@
            y="395.32367" /></flowRegion><flowPara
          id="flowPara1964" /></flowRoot>
     <g
-       style="display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1"
        id="g4863"
        transform="matrix(1.4391595e-4,0,0,1.4391595e-4,868.13506,937.07212)">
       <path
          inkscape:connector-curvature="0"
          d="M 5908.735,388006.2 C -23425.09,231462.3 58367.77,75049.68 208808.8,-0.3411255 359249.6,179461 608053.4,15552.29 668163.4,57630.01 791902.7,167078.4 826311.5,338069.7 753519.8,481801 517958.8,518273.3 314231.3,567447.4 5908.735,388006.2 Z"
-         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          id="path4865" />
     </g>
     <g
@@ -592,7 +592,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="looking up"
-     style="display:none">
+     style="display:inline">
     <path
        inkscape:connector-curvature="0"
        d="m 909.05289,605.51324 c 0,-3.71857 1.32642,-6.73309 2.96264,-6.73309 1.63624,0 2.96266,3.01452 2.96266,6.73309 0,3.71861 -1.32642,6.73313 -2.96266,6.73313 -1.63622,0 -2.96264,-3.01452 -2.96264,-6.73313 z"
@@ -624,7 +624,7 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="looking ahead"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:connector-curvature="0"
        d="m 914.79558,611.85441 c 0,-3.71857 1.3264,-6.73309 2.9626,-6.73309 1.6362,0 2.9627,3.01452 2.9627,6.73309 0,3.71861 -1.3265,6.73313 -2.9627,6.73313 -1.6362,0 -2.9626,-3.01452 -2.9626,-6.73313 z"
@@ -876,7 +876,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 1"
-     style="display:inline">
+     style="display:none">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -982,7 +982,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layer 2"
-     style="display:inline">
+     style="display:none">
     <flowRoot
        xml:space="preserve"
        id="flowRoot7724-8-88"
@@ -1104,7 +1104,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Layer 3"
-     style="display:inline">
+     style="display:none">
     <path
        style="display:inline;fill:none;stroke:#a2a2a2;stroke-width:3.86676;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker98862-7)"
        d="m 246.67146,497.34444 -86.19468,57.13165"
@@ -1199,7 +1199,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Layer 4"
-     style="display:inline">
+     style="display:none">
     <g
        id="g79744"
        transform="matrix(0.91722013,0,0,0.91722013,-467.5829,320.01787)"
@@ -1264,7 +1264,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Layer 5"
-     style="display:inline">
+     style="display:none">
     <g
        id="g4428"
        style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1"
@@ -1322,7 +1322,7 @@
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Layer 6"
-     style="display:inline">
+     style="display:none">
     <flowRoot
        xml:space="preserve"
        id="flowRoot7724-8-9-4-2"
@@ -1351,7 +1351,7 @@
      inkscape:groupmode="layer"
      id="layer21"
      inkscape:label="Layer 7"
-     style="display:inline">
+     style="display:none">
     <flowRoot
        xml:space="preserve"
        id="flowRoot7724-8-9-4-2-2"

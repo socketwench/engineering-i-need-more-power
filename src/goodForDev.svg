@@ -9,7 +9,7 @@
    version="1.1"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
    sodipodi:docname="goodForDev.svg"
-   inkscape:export-filename="../images/alreadyUsing2.png"
+   inkscape:export-filename="../images/goodForDev3.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -112,10 +112,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.75488281"
-     inkscape:cx="459.01164"
+     inkscape:cx="659.04269"
      inkscape:cy="339.78784"
      inkscape:document-units="px"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="px"
      inkscape:window-width="1600"
@@ -176,13 +176,13 @@
            y="395.32367" /></flowRegion><flowPara
          id="flowPara1964" /></flowRoot>
     <g
-       style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-opacity:1"
        id="g4863"
        transform="matrix(1.4391595e-4,0,0,1.4391595e-4,868.13506,937.07212)">
       <path
          inkscape:connector-curvature="0"
          d="M 5908.735,388006.2 C -23425.09,231462.3 58367.77,75049.68 208808.8,-0.3411255 359249.6,179461 608053.4,15552.29 668163.4,57630.01 791902.7,167078.4 826311.5,338069.7 753519.8,481801 517958.8,518273.3 314231.3,567447.4 5908.735,388006.2 Z"
-         style="fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          id="path4865" />
     </g>
     <g
@@ -389,7 +389,7 @@
      inkscape:groupmode="layer"
      id="layer13"
      inkscape:label="looking down"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        inkscape:connector-curvature="0"
@@ -438,7 +438,7 @@
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="looking ahead"
-     style="display:none">
+     style="display:inline">
     <path
        inkscape:connector-curvature="0"
        d="m 914.79558,611.85441 c 0,-3.71857 1.3264,-6.73309 2.9626,-6.73309 1.6362,0 2.9627,3.01452 2.9627,6.73309 0,3.71861 -1.3265,6.73313 -2.9627,6.73313 -1.6362,0 -2.9626,-3.01452 -2.9626,-6.73313 z"
@@ -690,7 +690,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 1"
-     style="display:none">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -719,12 +719,6 @@
            x="360.89743"
            y="475.82053" /></flowRegion><flowPara
          id="flowPara1060" /></flowRoot>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer6"
-     inkscape:label="Layer 2"
-     style="display:inline">
     <flowRoot
        xml:space="preserve"
        id="flowRoot7724-8-9-4-2-6"
@@ -743,6 +737,27 @@
            style="fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
          id="flowPara7730-5-4-5-5-7"
          style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1">Good for development,</flowPara></flowRoot>
+    <path
+       id="path46610"
+       style="display:inline;fill:none;stroke:#e8e8e8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+       d="m 270.82031,575.53516 c -95.37008,-2.4e-4 -172.682863,24.60941 -172.681638,54.96679 -0.0012,30.35738 77.311548,54.96704 172.681638,54.9668 95.36933,-10e-5 172.68093,-24.60966 172.67969,-54.9668 -0.008,-2.95798 -0.76653,-5.91093 -2.26758,-8.83007 88.54236,-24.8576 229.82916,-28.58476 390.43011,-24.5743 -144.50135,-16.22441 -288.98099,-17.23236 -433.43987,-3.67961 -32.70067,-11.38831 -78.9323,-17.8776 -127.40235,-17.88281 z"
+       sodipodi:nodetypes="ccsccccc" />
+    <g
+       transform="matrix(1.8777156e-4,0,0,1.8777156e-4,516.33835,363.08701)"
+       id="g4863-1-1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-opacity:1">
+      <path
+         id="path4865-0-9"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:38100;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         d="M 5908.735,388006.2 C -23425.09,231462.3 58367.77,75049.68 208808.8,-0.3411255 359249.6,179461 608053.4,15552.29 668163.4,57630.01 791902.7,167078.4 826311.5,338069.7 753519.8,481801 517958.8,518273.3 314231.3,567447.4 5908.735,388006.2 Z"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Layer 2"
+     style="display:inline">
     <flowRoot
        xml:space="preserve"
        id="flowRoot7724-8-9-4-2-6-8"
@@ -761,11 +776,6 @@
            style="fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
          id="flowPara7730-5-4-5-5-7-1"
          style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-opacity:1">but {don't} launch with it!</flowPara></flowRoot>
-    <path
-       id="path46610"
-       style="fill:none;stroke:#e8e8e8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
-       d="m 270.82031,575.53516 c -95.37008,-2.4e-4 -172.682863,24.60941 -172.681638,54.96679 -0.0012,30.35738 77.311548,54.96704 172.681638,54.9668 95.36933,-10e-5 172.68093,-24.60966 172.67969,-54.9668 -0.008,-2.95798 -0.76653,-5.91093 -2.26758,-8.83007 88.54236,-24.8576 229.82916,-28.58476 390.43011,-24.5743 -144.50135,-16.22441 -288.98099,-17.23236 -433.43987,-3.67961 -32.70067,-11.38831 -78.9323,-17.8776 -127.40235,-17.88281 z"
-       sodipodi:nodetypes="ccsccccc" />
     <path
        id="path46714"
        style="fill:none;stroke:#e8e8e8;stroke-width:3.10795;stroke-linecap:round;stroke-linejoin:round"
