@@ -2,24 +2,24 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1024"
    height="793.70081"
    viewBox="0 0 1024 793.70081"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
    sodipodi:docname="socketwench.svg"
-   inkscape:export-filename="../images/socketwench5.png"
+   inkscape:export-filename="../images/socketwench3.png"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,18 +29,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.378582"
-     inkscape:cx="411.80205"
-     inkscape:cy="418.82134"
+     inkscape:zoom="0.689291"
+     inkscape:cx="509.94428"
+     inkscape:cy="541.86113"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
      units="px"
-     inkscape:window-width="3200"
-     inkscape:window-height="1745"
+     inkscape:window-width="1600"
+     inkscape:window-height="868"
      inkscape:window-x="0"
-     inkscape:window-y="55"
-     inkscape:window-maximized="1" />
+     inkscape:window-y="-5"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -49,7 +50,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
       </cc:Work>
@@ -226,10 +226,10 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4163"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-26.113789,17.40919)"><flowRegion
          id="flowRegion4165"
-         style="fill:#e8e8e8;fill-opacity:1;"><rect
+         style="fill:#e8e8e8;fill-opacity:1"><rect
            id="rect4167"
            width="316.267"
            height="214.71338"
@@ -237,7 +237,8 @@
            y="80.336884"
            style="fill:#e8e8e8;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4169"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;">That's wench, not wrench!</flowPara></flowRoot>  </g>
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1">That's wench, not wrench!</flowPara></flowRoot>
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
@@ -247,10 +248,10 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4171"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       transform="translate(-47.015325,37.212264)"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-45.342216,59.41977)"><flowRegion
          id="flowRegion4173"
-         style="fill:#e8e8e8;fill-opacity:1;"><rect
+         style="fill:#e8e8e8;fill-opacity:1"><rect
            id="rect4175"
            width="223.418"
            height="84.14444"
@@ -258,9 +259,10 @@
            y="295.05026"
            style="fill:#e8e8e8;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara4177"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;">Module maintainer</flowPara></flowRoot>    <text
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1">Developer</flowPara></flowRoot>
+    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="887.98279"
        y="501.27673"
        id="text4179"><tspan
@@ -268,10 +270,10 @@
          id="tspan4181"
          x="887.98279"
          y="501.27673"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;">blogger</tspan></text>
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1">blogger</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="830.69818"
        y="598.43658"
        id="text4189"><tspan
@@ -279,7 +281,7 @@
          id="tspan4191"
          x="830.69818"
          y="598.43658"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;">educator</tspan></text>
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1">educator</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4876"
@@ -291,8 +293,9 @@
            height="92.12365"
            x="846.52203"
            y="452.04538" /></flowRegion><flowPara
-         id="flowPara4882"></flowPara></flowRoot>    <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:3.79086614;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="flowPara4882" /></flowRoot>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#e8e8e8;stroke-width:3.79087;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="m 801.91016,330.18164 a 138.91086,72.175613 0 0 0 -124.74024,40.62109 l -62.04492,5.80274 48.94727,17.24219 A 138.91086,72.175613 0 0 0 663,402.35742 a 138.91086,72.175613 0 0 0 138.91016,72.17578 138.91086,72.175613 0 0 0 7.49609,-0.13867 124.0405,50.05143 0 0 0 -47.75391,39.44336 124.0405,50.05143 0 0 0 58.96875,42.53711 138.18547,53.678345 0 0 0 -131.50781,53.58594 138.18547,53.678345 0 0 0 138.18555,53.67773 138.18547,53.678345 0 0 0 138.18555,-53.67773 138.18547,53.678345 0 0 0 -68.60938,-46.31446 124.0405,50.05143 0 0 0 112.8574,-49.80859 124.0405,50.05143 0 0 0 -124.03904,-50.05273 124.0405,50.05143 0 0 0 -12.01953,0.28515 138.91086,72.175613 0 0 0 67.14844,-61.71289 138.91086,72.175613 0 0 0 -138.91211,-72.17578 z"
        transform="translate(0,-25.700753)"
        id="path4884"
@@ -312,10 +315,10 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot8329"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#e8e8e8;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        transform="translate(-40.303314,-1.647702)"><flowRegion
          id="flowRegion8331"
-         style="fill:#e8e8e8;fill-opacity:1;"><rect
+         style="fill:#e8e8e8;fill-opacity:1"><rect
            id="rect8333"
            width="279.99786"
            height="114.61052"
@@ -323,7 +326,8 @@
            y="315.36099"
            style="fill:#e8e8e8;fill-opacity:1;" /></flowRegion><flowPara
          id="flowPara8335"
-         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1;">Devops Engineer  at</flowPara></flowRoot>    <image
+         style="font-size:30px;line-height:1.25;fill:#e8e8e8;fill-opacity:1">Devops Engineer  at</flowPara></flowRoot>
+    <image
        y="414.72534"
        x="58.558014"
        id="image8367"
@@ -337,10 +341,6 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:'Anime Ace 2.0 BB';-inkscape-font-specification:'Anime Ace 2.0 BB, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="311.9147"
        y="370.49011"
-       id="text4759"><tspan
-         sodipodi:role="line"
-         id="tspan4757"
-         x="311.9147"
-         y="404.02786" /></text>
+       id="text4759" />
   </g>
 </svg>

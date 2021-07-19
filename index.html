@@ -168,6 +168,9 @@
             <img src="images/opsflow6.png" />
           </section>
           <section data-transition="none">
+            <img src="images/opsflow6a.png" />
+          </section>
+          <section data-transition="none">
             <img src="images/opsflow7.png" />
           </section>
           <section data-transition="none">
@@ -215,6 +218,21 @@
             <p class="fragment">A resident, <span class="fragment">privileged container...</span></p>
             <p class="fragment">...which watches for CRDs, <span class="fragment">and performs actions</span></p>
           </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/youDefine1.png" data-background-size="contain">
+            <h3>Custom Resource Definition (CRD)</h3>
+            <p class="">&nbsp;</p>
+            <p class="">&nbsp;</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/youDefine2.png" data-background-size="contain">
+            <h3>Custom Resource Definition (CRD)</h3>
+            <p class="">&nbsp;</p>
+            <p class="">&nbsp;</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/youDefine3.png" data-background-size="contain">
+            <h3>Custom Resource Definition (CRD)</h3>
+            <p class="fragment">Model the structure needed for you app</p>
+            <p class="fragment">Not what's needed to run it on k8s</p>
+          </section>
           <section data-background="images/operatorsdk.png" data-background-size="contain">
             <h3>Operator SDK</h3>
             <p class="fragment">A framework to create operators</p>
@@ -246,7 +264,7 @@
           </section>
           <section>
              <h3>Initialization</h3>
-             <code class="fragment">operator-sdk init --domain example.test --plugins x,y,z</code>
+             <code class="fragment">operator-sdk init --domain example.com --plugins x,y,z</code>
           </section>
           <section>
             <h3>Domain</h3>
@@ -324,7 +342,7 @@
           <section data-transition="none">
             <h3>Directory layout</h3>
             <pre><code>path/to/my-operator/src
-  ├── config/                    <-- CRDs
+  ├── config/                    <-- CRDs, Schema, Samples, etc.
   ├── Dockerfile
   ├── Makefile
   ├── molecule/
@@ -417,9 +435,9 @@
             <pre><code>apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: mysqlclusters.myapp.example.tld
+  name: mysqlclusters.myapp.myorg.tld
 spec:
-  group: myapp.example.tld
+  group: myapp.myorg.tld
   names:
     kind: MySQLCluster
     listKind: MySQLClusterList
@@ -510,9 +528,33 @@ spec:
             <p class="fragment"><code>CamelCase</code> &rarr; <code>snake_case</code></p>
           </section>
           <section>
+            <h3>Sample CRD</h3>
+            <pre class="fragment"><code>apiVersion: myapp.myorg.tld/v1
+kind: MySQLCluster
+metadata:
+  name: mysqlcluster-sample
+spec:
+  mysqlAdminSecret: mysql-admin
+  mysqlReadersSecret: mysql-reader
+  size: "20Gi"
+</code></pre>
+          </section>
+          <section>
+            <h3>Vars in Ansible</h3>
+            <pre class="fragment"><code>---
+- name: Get the spec variables
+  debug:
+    msg: |
+        {{ ansible_operator_meta.name }}
+        {{ ansible_operator_meta.namespace }}
+        {{ mysql_admin_secret }}
+        {{ mysql_readers_secret }}
+        {{ size }}</code></pre>
+          </section>
+          <section>
             <h3>Creating, updating defs</h3>
             <p class="fragment"><code>k8s</code> module</p>
-            <p class="fragment"><code>~/.kube/config.json</code> auto-populated</p>
+            <p class="fragment">Local cluster already authenticated</p>
           </section>
           <section>
             <pre><code>---
@@ -550,12 +592,12 @@ spec:
           <section data-transition="none" data-background-transition="none" data-background="images/registryUrl1.png" data-background-size="contain">
             <h3>Configure image and tag</h3>
             <p class="fragment">Set in <code>Makefile</code></p>
-            <pre class="fragment"><code>IMG ?= https://registry.example.tld/my-operator:x.y.z</code></pre>
+            <pre class="fragment"><code>IMG ?= https://registry.example.com/my-operator:x.y.z</code></pre>
           </section>
           <section data-transition="none" data-background-transition="none" data-background="images/registryUrl2.png" data-background-size="contain">
             <h3>Configure image and tag</h3>
             <p class="">Set in <code>Makefile</code></p>
-            <pre class=""><code>IMG ?= https://registry.example.tld/my-operator:x.y.z</code></pre>
+            <pre class=""><code>IMG ?= https://registry.example.com/my-operator:x.y.z</code></pre>
           </section>
           <section>
             <h3>Build the docker image</h3>
@@ -567,47 +609,148 @@ spec:
             <p class="fragment"><code>docker login</code></p>
             <p class="fragment"><code>make docker-push</code></p>
           </section>
-          <section data-transition="none" data-background-transition="none" data-background="images/hackTheMakefile1.png" data-background-size="contain">
+          <section>
             <h3>Apply defs</h3>
             <p class="fragment"><code>make deploy</code></p>
-            <p class="fragment">Set credientials in <code>~/.kube/config</code></p>
-          </section>
-          <section data-transition="none" data-background-transition="none" data-background="images/hackTheMakefile2.png" data-background-size="contain">
-            <h3>Apply defs</h3>
-            <p class=""><code>make deploy</code></p>
-            <p class="">Set credientials in <code>~/.kube/config</code></p>
+            <p class="fragment">Applies to default authorized cluster</p>
           </section>
           <section>
             <h3>Deploy a CRD</h3>
             <p class="fragment">YAML in <code>config/samples/</code></p>
             <p class="fragment">Edit, then <code>kubectl apply</code></p>
           </section>
-          <section>
-            <h3>Watch the fun</h3>
-            <p class="fragment"><code>kubectl logs my-operator-pod</code></p>
-            <p class="fragment">Not necessary, but instructive!</p>
+          <!-- <section>
+            <h3>Roles run twice</h3>
+            <ol>
+              <li class="fragment">Deployment run</li>
+              <li class="fragment">Reconcile run</li>
+            </ol>
+          </section> -->
+          <section data-transition="none">
+            <img src="images/changed01.png" />
           </section>
+          <section data-transition="none">
+            <img src="images/changed02.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed03.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed04.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed05.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed06.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed07.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/changed08.png" />
+          </section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/runTwice1.png" data-background-size="contain">
+            <h3>Deployment run</h3>
+            <p class="fragment">Creates new k8s objects</p>
+            <p class="fragment">Deployments, StatefulSets, Pods, etc.</p>
+          </section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/runTwice2.png" data-background-size="contain">
+            <h3>Deployment run</h3>
+            <p class="">Creates new k8s objects</p>
+            <p class="">Deployments, StatefulSets, Pods, etc.</p>
+          </section>
+          <section  data-transition="none" data-background-transition="none" data-background="images/runTwice3.png" data-background-size="contain">
+            <h3>Deployment run</h3>
+            <p class="">Creates new k8s objects</p>
+            <p class="">Deployments, StatefulSets, Pods, etc.</p>
+          </section>
+          <section data-transition="none">
+            <img src="images/ok01.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok02.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok03.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok04.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok05.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok06.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok07.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/ok08.png" />
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/loop1.png" data-background-size="contain">
+            <h3>Reconcile run</h3>
+            <p class="fragment">Validates current config against operator</p>
+            <p class="fragment">Must <em>not</em> have any <code>changed</code></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/loop2.png" data-background-size="contain">
+            <h3>Reconcile run</h3>
+            <p class="">Validates current config against operator</p>
+            <p class="">Must <em>not</em> have any <code>changed</code></p>
+          </section>
+          <!-- <section>
+            <h3>Creating a temp file</h3>
+            <p class="fragment">Counts as a change on the controller</p>
+            <p class="fragment">Use conditions to avoid if unused</p>
+          </section> -->
           <section>
             <h3>Viewing results</h3>
             <p class="fragment"><code>kubectl edit</code> the CRD</p>
-            <p class="fragment"><code>state</code> section (VALIDATE THIS)</p>
+            <p class="fragment"><code>status.ansibleResult</code> section</p>
           </section>
           <section>
-            <h3>Roles run twice</h3>
-            <ol>
-              <li class="fragment">Deployment run creates k8s resources</li>
-              <li class="fragment">Reconcile run validates resource state</li>
-            </ol>
+            <pre><code>apiVersion: flightdeck.t7.io/v1
+kind: MySQLCluster
+...
+status:
+  conditions:
+  - ansibleResult:
+      changed: 0
+      completion: 2021-07-19T15:57:27.258505
+      failures: 1
+      ok: 9
+      skipped: 6
+    lastTransitionTime: "2021-07-19T15:57:27Z"
+    message: unknown playbook failure
+    reason: Failed
+    status: "False"
+    type: Failure</code></pre>
+            <p class="fragment"><small>(Scroll down)</small></p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/deployLoops1.png" data-background-size="contain">
+            <h3>Tailing the manager</h3>
+            <pre class="fragment"><code>kubectl logs -f my-operator-pod -c manager</code></pre>
+            <p class="fragment">Not necessary, but instructive!</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/deployLoops2.png" data-background-size="contain">
+            <h3>Tailing the manager</h3>
+            <pre class=""><code>kubectl logs -f my-operator-pod -c manager</code></pre>
+            <p class="">Not necessary, but instructive!</p>
           </section>
           <section>
-            <h3>Importance of 'CHANGED'</h3>
-            <p class="fragment">Updating a def, writing a file, etc.</p>
-            <p class="fragment">Causes reconcile run to loop</p>
+            <pre><code>--------------------------- Ansible Task StdOut -------------------------------
+
+ TASK [Work with the writer] ********************************
+fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/tmp/ansible-operator/runner/mykind.myapp.tld/v1/MySQLCluster/my-namespace/mysqlcluster-sample/project/writer.yml' on the Ansible Controller."}
+
+-------------------------------------------------------------------------------</code></pre>
+            <p class="fragment"><small>(Scroll right)</small></code></p>
           </section>
           <section>
             <h3>Clean up</h3>
             <p class="fragment"><code>make undeploy</code></p>
-            <p class="fragment">Mind you finalizers!</p>
+            <p class="fragment">Mind your finalizers!</p>
           </section>
         </section>
 
@@ -746,13 +889,58 @@ RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
 USER ansible</code></pre>
             <p class="fragment"><small>(Scroll down)</small></p>
           </section>
-          <section>
-            <h3>SOMETHING ABOUT CHAIN LOOKUPS HERE</h3>
+          <section data-transition="none">
+            <img src="images/yousuck01.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck02.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck03.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck04.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck05.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck06.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/yousuck07.png" />
           </section>
           <section>
             <h3>Looking up defs</h3>
             <p class="fragment"><code>k8s</code> lookup</p>
-            <p class="fragment">Relies on <code>~/.kube/config.json</code></p>
+            <p class="fragment">Local cluster already authenticated</p>
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup01.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup02.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup03.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup04.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup05.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup06.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup07.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup08.png" />
+          </section>
+          <section data-transition="none">
+            <img src="images/lookup09.png" />
           </section>
           <section>
             <pre><code>- name: Get CRD
@@ -771,10 +959,15 @@ USER ansible</code></pre>
             <p class="fragment">Returns empty list, <span class="fragment">does <ins>not</ins> fail the run!</span></p>
             <p class="fragment"><code>(_def_lookup | default([])) | length < 1</code></p>
           </section>
-          <section>
+          <section data-transition="none" data-background-transition="none" data-background="images/showsUpInStatus1.png" data-background-size="contain">
             <h3>Fail module</h3>
             <p class="fragment">Causes run to fail</p>
             <p class="fragment">Set message to aid debugging</p>
+          </section>
+          <section data-transition="none" data-background-transition="none" data-background="images/showsUpInStatus2.png" data-background-size="contain">
+            <h3>Fail module</h3>
+            <p class="">Causes run to fail</p>
+            <p class="">Set message to aid debugging</p>
           </section>
           <section>
             <pre><code>- name: Fetch the MySQLCluster definition
@@ -847,7 +1040,7 @@ USER ansible</code></pre>
         </section>
 
         <section>
-          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/lcarsSection.png" data-background-size="contain">
+          <section style="padding-left: 3rem !important; padding-top: 6rem !important;" data-background-transition="none" data-background="images/eeh.png" data-background-size="contain">
             <h2>Activate the Emergency Engineering Hologram!</h2>
             <p>Automating deployment</p>
           </section>
