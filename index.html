@@ -86,18 +86,18 @@
           <section data-transition="none">
             <img src="images/disaster02.png" />
           </section>
-          <section data-transition="none">
+          <!-- <section data-transition="none">
             <img src="images/disaster03.png" />
-          </section>
+          </section> -->
           <section data-transition="none">
             <img src="images/disaster04.png" />
           </section>
           <section data-transition="none">
             <img src="images/disaster05.png" />
           </section>
-          <section data-transition="none">
+          <!-- <section data-transition="none">
             <img src="images/disaster06.png" />
-          </section>
+          </section> -->
           <section data-transition="none">
             <img src="images/disaster07.png" />
           </section>
@@ -768,127 +768,6 @@ fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/tmp/ansibl
             <h3>No reconcile run</h3>
             <p class="fragment">No k8s defs created, so not needed</p>
           </section>
-          <section>
-            <h3>Modifying the image</h3>
-            <p class="fragment">Update <code>Dockerfile</code></p>
-            <p class="fragment">Based on <a href="https://hub.docker.com/r/redhat/ubi8">RedHat UBI</a></p>
-          </section>
-          <section>
-            <h3>Adding libraries</h3>
-            <p class="fragment"><code>pip</code> for Python-only libs</p>
-            <p class="fragment"><code>yum</code> for everything else</p>
-            <p class="fragment"><small>Thanks Jeff Geerling!</small></p>
-          </section>
-          <section data-transition="none">
-            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
-
-COPY requirements.yml ${HOME}/requirements.yml
-RUN ansible-galaxy collection install \
- -r ${HOME}/requirements.yml \
- && chmod -R ug+rwx ${HOME}/.ansible
-
-COPY watches.yaml ${HOME}/watches.yaml
-COPY roles/ ${HOME}/roles/
-COPY playbooks/ ${HOME}/playbooks/
-
-USER root
-
-ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
-
-RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
-    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
-
-USER ansible</code></pre>
-            <p><small>&nbsp</small></p>
-          </section>
-          <section data-transition="none">
-            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
-
-COPY requirements.yml ${HOME}/requirements.yml   #
-RUN ansible-galaxy collection install \          #
- -r ${HOME}/requirements.yml \                   #
- && chmod -R ug+rwx ${HOME}/.ansible             #
-                                                 #  Lines from SDK
-COPY watches.yaml ${HOME}/watches.yaml           #
-COPY roles/ ${HOME}/roles/                       #
-COPY playbooks/ ${HOME}/playbooks/               #
-
-USER root
-
-ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
-
-RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
-    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
-
-USER ansible</code></pre>
-            <p><small>&nbsp</small></p>
-          </section>
-          <section data-transition="none">
-            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
-
-COPY requirements.yml ${HOME}/requirements.yml
-RUN ansible-galaxy collection install \
- -r ${HOME}/requirements.yml \
- && chmod -R ug+rwx ${HOME}/.ansible
-
-COPY watches.yaml ${HOME}/watches.yaml
-COPY roles/ ${HOME}/roles/
-COPY playbooks/ ${HOME}/playbooks/
-
-USER root     # change to root to run installs
-
-ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
-
-RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
-    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
-
-USER ansible</code></pre>
-            <p><small>&nbsp</small></p>
-          </section>
-          <section data-transition="none">
-            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
-
-COPY requirements.yml ${HOME}/requirements.yml
-RUN ansible-galaxy collection install \
- -r ${HOME}/requirements.yml \
- && chmod -R ug+rwx ${HOME}/.ansible
-
-COPY watches.yaml ${HOME}/watches.yaml
-COPY roles/ ${HOME}/roles/
-COPY playbooks/ ${HOME}/playbooks/
-
-USER root
-# Download MySQL
-ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
-
-RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
-    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
-
-USER ansible</code></pre>
-            <p><small>&nbsp</small></p>
-          </section>
-          <section data-transition="none">
-            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
-
-COPY requirements.yml ${HOME}/requirements.yml
-RUN ansible-galaxy collection install \
- -r ${HOME}/requirements.yml \
- && chmod -R ug+rwx ${HOME}/.ansible
-
-COPY watches.yaml ${HOME}/watches.yaml
-COPY roles/ ${HOME}/roles/
-COPY playbooks/ ${HOME}/playbooks/
-
-USER root
-
-ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
-# Install MySQL client and Python libs
-RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
-    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
-# Switch back to ansible user.
-USER ansible</code></pre>
-            <p class="fragment"><small>(Scroll down)</small></p>
-          </section>
           <section data-transition="none">
             <img src="images/yousuck01.png" />
           </section>
@@ -1037,6 +916,127 @@ USER ansible</code></pre>
             <p class="fragment"><code>make undeploy</code> kills operator <em>first</em></p>
             <p class="fragment">Delete defs manually, or <code>finalizers: []</code></p>
           </section>
+          <section>
+            <h3>Modifying the image</h3>
+            <p class="fragment">Update <code>Dockerfile</code></p>
+            <p class="fragment">Based on <a href="https://hub.docker.com/r/redhat/ubi8">RedHat UBI</a></p>
+          </section>
+          <section>
+            <h3>Adding libraries</h3>
+            <p class="fragment"><code>pip</code> for Python-only libs</p>
+            <p class="fragment"><code>yum</code> for everything else</p>
+            <p class="fragment"><small>Thanks Jeff Geerling!</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml   #
+RUN ansible-galaxy collection install \          #
+ -r ${HOME}/requirements.yml \                   #
+ && chmod -R ug+rwx ${HOME}/.ansible             #
+                                                 #  Lines from SDK
+COPY watches.yaml ${HOME}/watches.yaml           #
+COPY roles/ ${HOME}/roles/                       #
+COPY playbooks/ ${HOME}/playbooks/               #
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root     # change to root to run installs
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+# Download MySQL
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+
+USER ansible</code></pre>
+            <p><small>&nbsp</small></p>
+          </section>
+          <section data-transition="none">
+            <pre><code>FROM quay.io/operator-framework/ansible-operator:latest
+
+COPY requirements.yml ${HOME}/requirements.yml
+RUN ansible-galaxy collection install \
+ -r ${HOME}/requirements.yml \
+ && chmod -R ug+rwx ${HOME}/.ansible
+
+COPY watches.yaml ${HOME}/watches.yaml
+COPY roles/ ${HOME}/roles/
+COPY playbooks/ ${HOME}/playbooks/
+
+USER root
+
+ADD https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm /tmp/mysql80-community-release-el8-1.noarch.rpm
+# Install MySQL client and Python libs
+RUN yum install -y /tmp/mysql80-community-release-el8-1.noarch.rpm && \
+    yum install -y mysql-community-client mysql-community-common mysql-community-libs python38-PyMySQL
+# Switch back to ansible user.
+USER ansible</code></pre>
+            <p class="fragment"><small>(Scroll down)</small></p>
+          </section>
         </section>
 
         <section>
@@ -1155,7 +1155,7 @@ jobs:
           </section>
           <section>
             <h3>Deployment</h3>
-            <p class="fragment">Commit to main, tag, push</p>
+            <p class="fragment">Commit to <code>gh-pages</code>, tag, push</p>
             <p class="fragment">Hub builds image</p>
             <p class="fragment">Action builds Chart</p>
           </section>
