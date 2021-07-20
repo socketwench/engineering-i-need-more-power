@@ -73,6 +73,11 @@ body {
   text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 }
 
+.reveal .teamten7 .fragment {
+  color: white;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+}
+
 .reveal h3 {
   font-size: 2.2em; }
 
@@ -235,6 +240,13 @@ body {
  *********************************************/
 .reveal a {
   color: #5ec0f5;
+  text-decoration: underline;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal .teamten7 a {
+  color: #ffffff;
   text-decoration: underline;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
