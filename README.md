@@ -1,29 +1,24 @@
-# Return of the Clustering
+# Engineering! I need more power!
 
-A Reveal.js presentation on Drupal running on DigitalOcean Kubernetes
+A Reveal.js presentation on Kubernetes Operators with a Final Frontier theme.
 
 ## Summary
 
-It is a time of conflict for the hosting empire. The Kubernetes Alliance led by Whale Dockerdeployer has dealt a serious blow via the introduction of Continuous Integration and Ansible. Now, away from big hosting companies like Pantheon and Acquia, can our intretpid hero both lower Total Cost of Ownership, and improve release velocity while relying solely on open source? Will they master the power of container-centric clustering to bring peace to the galaxy?
+We know how it is, you're just chilling in Main Engineering, when the captain demands more power! Your Kubernetes application relies on k8s definitions, internal applications, and external APIs. Scaling up to handle more capacity requires manual processes. But what if we could encode all that knowledge into a resident, privileged on-cluster application?
 
-The Deploy Wars continue...
+In this talk, we'll introduce Operators as a development pattern, and the Operator SDK as a means to make an Operator based on Ansible code.
 
 ## Slides
 
-The slides themselves are available at [socketwench.github.io/return-of-the-clustering](http://socketwench.github.io/return-of-the-clustering)
+The slides themselves are available at [socketwench.github.io/engineering-i-need-more-power](https://socketwench.github.io/engineering-i-need-more-power)
 
 ## Speaklog
 
-* Florida Drupalcamp 2019
-* Drupaldelphia 2019
-* Flyover Camp 2019
-* Twin Cities Drupal 2019
+* DevOps Days Minneapolis 2021
 
 ## Changelog
 
-* 2.0: Updated to use Digitalocean
-* 2.1: Minor fixes
-* 2.1.1: More minor fixes
+* 1.0 Given at DevOps Days Minneapolis
 
 ## Reveal.js
 
