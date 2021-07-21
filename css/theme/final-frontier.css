@@ -75,7 +75,7 @@ body {
 
 .reveal .teamten7 .fragment {
   color: white;
-  text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .reveal h3 {
@@ -250,7 +250,9 @@ body {
   text-decoration: underline;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
 
 .reveal a:hover {
   color: #f3d7ac;
